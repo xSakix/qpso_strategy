@@ -89,7 +89,7 @@ price_change = df_adj_close.pct_change()
 
 print('Running optimisation...')
 
-strategyFinder = QPSOStrategyFinder(10, 100, m=len(ticket_list))
+strategyFinder = QPSOStrategyFinder(30, 100, m=len(ticket_list))
 best = strategyFinder.run(price_change)
 
 plt.plot(best.evaluate(price_change))
